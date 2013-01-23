@@ -1,0 +1,240 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-01-22 22:16:26 -0800
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (6ms)
+
+
+Started GET "/codegain" for 127.0.0.1 at 2013-01-22 22:16:43 -0800
+
+ActionController::RoutingError (No route matches [GET] "/codegain"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 22:32:08 -0800
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 22:34:34 -0800
+
+AbstractController::ActionNotFound (The action 'index' could not be found for HomeController):
+  actionpack (3.2.11) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.4) lib/rack/etag.rb:23:in `call'
+  rack (1.4.4) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__692941264772881446__call__3152714015364306400__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 22:34:47 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Compiled home.css  (9ms)  (pid 49913)
+Compiled application.css  (40ms)  (pid 49913)
+Compiled jquery.js  (3ms)  (pid 49913)
+Compiled jquery_ujs.js  (0ms)  (pid 49913)
+Compiled home.js  (114ms)  (pid 49913)
+Compiled application.js  (179ms)  (pid 49913)
+Completed 200 OK in 310ms (Views: 309.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /home.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-22 22:34:48 -0800
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 23:43:26 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"home"}):
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3987816483079510758_70160461236220'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 23:43:39 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `home' for #<#<Class:0x007f9f04879538>:0x007f9f02cab950>):
+    1: 
+    2: 
+    3: <%= form_tag home, :method => :get do %>
+    4: 
+    5: 
+    6: <% end %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3987816483079510758_70160461686100'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 23:44:09 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionController::RoutingError (No route matches {:action=>"show", :controller=>"home"}):
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3987816483079510758_70160484843200'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 23:44:25 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined local variable or method `root' for #<#<Class:0x007f9f04879538>:0x007f9f04ad0520>):
+    1: 
+    2: 
+    3: <%= form_tag root, :method => :get do %>
+    4: 
+    5: 
+    6: <% end %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3987816483079510758_70160477403840'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-01-22 23:44:33 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `homes_path' for #<#<Class:0x007f9f04879538>:0x007f9f02c65310>):
+    1: 
+    2: 
+    3: <%= form_tag homes_path, :method => :get do %>
+    4: 
+    5: 
+    6: <% end %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__3987816483079510758_70160461536800'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
