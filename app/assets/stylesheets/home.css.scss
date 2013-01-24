@@ -8,10 +8,25 @@
 
 .field input {
   width: 400px;
+  -moz-transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.field input:focus {
+  background-color: rgba(153, 156, 203, .2);
 }
 
 #message {
-  size: 100px;
+  width: 400px;
+  height: 75px;
+  -moz-transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+#message:focus {
+  background-color: rgba(153, 156, 203, .2);
 }
 
 #contact-form-submit {
