@@ -1,3 +1,33 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#contact-form {
+  text-align: center;
+}
+
+.field input {
+  width: 400px;
+}
+
+#message {
+  size: 100px;
+}
+
+#contact-form-submit {
+  width: 445px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9372F7), color-stop(100%, #6443C9));
+  color: #100F14;
+  border: none;
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.64286em 1.71429em 0.64286em 1.71429em;
+}
+
+#contact-form-submit:hover {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6443C9), color-stop(100%, #9372F7));
+}
+
+.add-on {
+  padding: 5px;
+}
