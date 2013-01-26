@@ -1,8 +1,8 @@
 Codegain::Application.routes.draw do
-  resources :home
+  resources :home, :messages
 
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  match 'home' => 'home#new', :as => 'home', :via => :get
+  match 'home' => 'home#create', :as => 'home', :via => :post
 
   root :to => "home#index"
 end

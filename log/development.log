@@ -32101,3 +32101,1695 @@ ActionController::RoutingError (No route matches [GET] "/assets"):
 
   Rendered /Users/davidyoo/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
 >>>>>>> f9db78df0d86c968d1c9104ecdd1adb22cf9ff66
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:21:36 -0800
+Connecting to database specified by database.yml
+
+PG::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__2983613583725978044__call__439473654952608434__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:47:31 -0800
+Connecting to database specified by database.yml
+
+PG::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__1598136093701933981__call__3104712158244078377__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:47:32 -0800
+
+PG::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__1598136093701933981__call__3104712158244078377__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:48:21 -0800
+Connecting to database specified by database.yml
+
+PG::Error (FATAL:  database "codegain_development" does not exist
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__105447730434208952__call__4591340378533657927__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:48:22 -0800
+
+PG::Error (FATAL:  database "codegain_development" does not exist
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__105447730434208952__call__4591340378533657927__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:48:23 -0800
+
+PG::Error (FATAL:  database "codegain_development" does not exist
+):
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:1208:in `connect'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:326:in `initialize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  activerecord (3.2.11) lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/monitor.rb:201:in `mon_synchronize'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__105447730434208952__call__4591340378533657927__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:48:44 -0800
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.3ms)
+  Rendered shared/content/_who.html.erb (1.0ms)
+  Rendered shared/content/_contact.html.erb (6.2ms)
+  Rendered home/index.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143151149160'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:51:43 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143151149160'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:56:47 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (1.1ms)
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143151149160'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:57:37 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143151149160'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 22:57:50 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (8.7ms)
+  Rendered home/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `messages_path' for #<#<Class:0x007f96f57e2b68>:0x007f96f57dfb48>):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143151149160'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:01:10 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.5ms)
+  Rendered shared/content/_contact.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:01:56 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:02:00 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (1.0ms)
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:02:33 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (1.0ms)
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:02:35 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (0.6ms)
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:02:47 -0800
+Processing by HomeController#new as HTML
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template home/new, application/new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/KayvonG/Desktop/CodeGain/codegain/app/views"
+  * "/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/twitter-bootstrap-rails-2.2.0/app/views"
+):
+  actionpack (3.2.11) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.11) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:414:in `_run__2721359851386830261__process_action__4010323486185839502__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.4) lib/rack/etag.rb:23:in `call'
+  rack (1.4.4) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.4) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__383360657021166943__call__3623336100087882188__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:02:54 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+  Rendered shared/content/_contact.html.erb (0.5ms)
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:03:19 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.3ms)
+  Rendered shared/content/_contact.html.erb (35.8ms)
+  Rendered home/index.html.erb within layouts/application (38.7ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (undefined method `messages_path' for #<#<Class:0x007f96f3cd99c0>:0x007f96f3cd6978>):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:06:53 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.3ms)
+  Rendered shared/content/_contact.html.erb (11.0ms)
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `messages_path' for #<#<Class:0x007f96f54fda88>:0x007f96f54fad10>):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143165157400'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:08:07 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.0ms)
+  Rendered shared/content/_who.html.erb (0.2ms)
+ERROR: compiling _app_views_shared_content__contact_html_erb__1088523403222405954_70143165668640 RAISED /Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...er.append=  form_for @message :url => home do |f| @output_bu...
+...                               ^
+Function body:           def _app_views_shared_content__contact_html_erb__1088523403222405954_70143165668640(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "shared/content/_contact";_old_output_buffer = @output_buffer;contact = local_assigns[:contact];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style type="text/css">
+/** we\'ll move this out later **/
+label {
+  display: inline-block;
+}
+</style>
+
+<section id="contact">
+  <div class="container">
+    <div class="featurette">
+      <h2>Contact Us</h2>
+      ');@output_buffer.append=  form_for @message :url => home do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <fieldset class="fields">
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span>
+            ');@output_buffer.append= ( f.text_field :name, nil, placeholder: "Name" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-envelope"></i></span>
+            ');@output_buffer.append= ( f.email_field(:user, nil, placeholder: "Email") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comment-alt"></i></span>
+            ');@output_buffer.append= ( f.text_field :subject, nil, placeholder: "Subject"  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comments"></i></span>
+            ');@output_buffer.append= ( f.text_area :body, nil, placeholder: "Message" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </fieldset>
+
+        <fieldset class="actions">
+          <div class="span6">
+            ');@output_buffer.append= ( f.submit_tag "Send Message", id: "contact-form-submit" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div> 
+        </fieldset>
+');       end 
+@output_buffer.safe_concat('    </div>
+  </div>
+</section>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__2721359851386830261__process_action__1303957802623993276__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/etag.rb:23:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__383360657021166943__call__3623336100087882188__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/lock.rb:15:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/handler/webrick.rb:59:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered shared/content/_contact.html.erb (1.0ms)
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...er.append=  form_for @message :url => home do |f| @output_bu...
+...                               ^):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message :url => home do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:08:33 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.9ms)
+ERROR: compiling _app_views_shared_content__contact_html_erb__1088523403222405954_70143164259420 RAISED /Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...er.append=  form_for @message :url => home, :method => :post...
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...essage :url => home, :method => :post do |f| @output_buffer....
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_shared_content__contact_html_erb__1088523403222405954_70143164259420(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "shared/content/_contact";_old_output_buffer = @output_buffer;contact = local_assigns[:contact];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style type="text/css">
+/** we\'ll move this out later **/
+label {
+  display: inline-block;
+}
+</style>
+
+<section id="contact">
+  <div class="container">
+    <div class="featurette">
+      <h2>Contact Us</h2>
+      ');@output_buffer.append=  form_for @message :url => home, :method => :post do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <fieldset class="fields">
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span>
+            ');@output_buffer.append= ( f.text_field :name, nil, placeholder: "Name" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-envelope"></i></span>
+            ');@output_buffer.append= ( f.email_field(:user, nil, placeholder: "Email") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comment-alt"></i></span>
+            ');@output_buffer.append= ( f.text_field :subject, nil, placeholder: "Subject"  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comments"></i></span>
+            ');@output_buffer.append= ( f.text_area :body, nil, placeholder: "Message" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </fieldset>
+
+        <fieldset class="actions">
+          <div class="span6">
+            ');@output_buffer.append= ( f.submit_tag "Send Message", id: "contact-form-submit" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div> 
+        </fieldset>
+');       end 
+@output_buffer.safe_concat('    </div>
+  </div>
+</section>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__2721359851386830261__process_action__1303957802623993276__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/etag.rb:23:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__383360657021166943__call__3623336100087882188__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/lock.rb:15:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/handler/webrick.rb:59:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered shared/content/_contact.html.erb (2.6ms)
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...er.append=  form_for @message :url => home, :method => :post...
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...essage :url => home, :method => :post do |f| @output_buffer....
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for @message :url => home, :method => :post do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:08:55 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.7ms)
+ERROR: compiling _app_views_shared_content__contact_html_erb__1088523403222405954_70143155689480 RAISED /Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...r.append=  form_for(@message) :url => home, :method => :post...
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...ssage) :url => home, :method => :post do |f| @output_buffer....
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_shared_content__contact_html_erb__1088523403222405954_70143155689480(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "shared/content/_contact";_old_output_buffer = @output_buffer;contact = local_assigns[:contact];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<style type="text/css">
+/** we\'ll move this out later **/
+label {
+  display: inline-block;
+}
+</style>
+
+<section id="contact">
+  <div class="container">
+    <div class="featurette">
+      <h2>Contact Us</h2>
+      ');@output_buffer.append=  form_for(@message) :url => home, :method => :post do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('        <fieldset class="fields">
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span>
+            ');@output_buffer.append= ( f.text_field :name, nil, placeholder: "Name" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-envelope"></i></span>
+            ');@output_buffer.append= ( f.email_field(:user, nil, placeholder: "Email") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comment-alt"></i></span>
+            ');@output_buffer.append= ( f.text_field :subject, nil, placeholder: "Subject"  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comments"></i></span>
+            ');@output_buffer.append= ( f.text_area :body, nil, placeholder: "Message" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+        </fieldset>
+
+        <fieldset class="actions">
+          <div class="span6">
+            ');@output_buffer.append= ( f.submit_tag "Send Message", id: "contact-form-submit" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div> 
+        </fieldset>
+');       end 
+@output_buffer.safe_concat('    </div>
+  </div>
+</section>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `module_eval'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:297:in `compile'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:232:in `compile!'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:144:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:145:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:125:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/template.rb:143:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__2721359851386830261__process_action__1303957802623993276__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/etag.rb:23:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__383360657021166943__call__3623336100087882188__callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/lock.rb:15:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/engine.rb:479:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/application.rb:223:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/rack-1.4.4/lib/rack/handler/webrick.rb:59:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+  Rendered shared/content/_contact.html.erb (3.4ms)
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected ':', expecting keyword_end
+...r.append=  form_for(@message) :url => home, :method => :post...
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:12: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...ssage) :url => home, :method => :post do |f| @output_buffer....
+...                               ^
+/Users/KayvonG/Desktop/CodeGain/codegain/app/views/shared/content/_contact.html.erb:41: syntax error, unexpected keyword_ensure, expecting $end):
+    9:   <div class="container">
+    10:     <div class="featurette">
+    11:       <h2>Contact Us</h2>
+    12:       <%= form_for(@message) :url => home, :method => :post do |f| %>
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (108.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:09:21 -0800
+
+SyntaxError (/Users/KayvonG/Desktop/CodeGain/codegain/config/routes.rb:2: syntax error, unexpected ':', expecting keyword_end
+  resources :home :messages
+                   ^):
+  activesupport (3.2.11) lib/active_support/dependencies.rb:245:in `load'
+  activesupport (3.2.11) lib/active_support/dependencies.rb:245:in `block in load'
+  activesupport (3.2.11) lib/active_support/dependencies.rb:236:in `load_dependency'
+  activesupport (3.2.11) lib/active_support/dependencies.rb:245:in `load'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (3.2.11) lib/active_support/file_update_checker.rb:78:in `call'
+  activesupport (3.2.11) lib/active_support/file_update_checker.rb:78:in `execute'
+  activesupport (3.2.11) lib/active_support/file_update_checker.rb:86:in `execute_if_updated'
+  railties (3.2.11) lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+  railties (3.2.11) lib/rails/application/finisher.rb:68:in `block (2 levels) in <module:Finisher>'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:440:in `_run__1315218320654988731__prepare__3623336100087882188__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_prepare_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:09:26 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.5ms)
+  Rendered shared/content/_contact.html.erb (6.9ms)
+  Rendered home/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 2)):
+    13:         <fieldset class="fields">
+    14:           <div class="field span6 input-prepend">
+    15:             <span class="add-on"><i class="icon-user"></i></span>
+    16:             <%= f.text_field :name, nil, placeholder: "Name" %>
+    17:           </div>
+    18:           <div class="field span6 input-prepend">
+    19:             <span class="add-on"><i class="icon-envelope"></i></span>
+  app/views/shared/content/_contact.html.erb:16:in `block in _app_views_shared_content__contact_html_erb__1088523403222405954_70143167763600'
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143167763600'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.7ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (34.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:09:48 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.9ms)
+  Rendered shared/content/_contact.html.erb (8.9ms)
+  Rendered home/index.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `user' for #<Message:0x007f96f4de79b0>):
+    17:           </div>
+    18:           <div class="field span6 input-prepend">
+    19:             <span class="add-on"><i class="icon-envelope"></i></span>
+    20:             <%= f.email_field(:user, placeholder: "Email") %>
+    21:           </div>
+    22:           <div class="field span6 input-prepend">
+    23:             <span class="add-on"><i class="icon-comment-alt"></i></span>
+  app/views/shared/content/_contact.html.erb:20:in `block in _app_views_shared_content__contact_html_erb__1088523403222405954_70143164977300'
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143164977300'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:10:08 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.6ms)
+  Rendered shared/content/_contact.html.erb (202.4ms)
+  Rendered home/index.html.erb within layouts/application (209.8ms)
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (undefined method `submit_tag' for #<ActionView::Helpers::FormBuilder:0x007f96f3dcd9a8>):
+    31: 
+    32:         <fieldset class="actions">
+    33:           <div class="span6">
+    34:             <%= f.submit_tag "Send Message", id: "contact-form-submit" %>
+    35:           </div> 
+    36:         </fieldset>
+    37:       <% end %>
+  app/views/shared/content/_contact.html.erb:34:in `block in _app_views_shared_content__contact_html_erb__1088523403222405954_70143156604520'
+  app/views/shared/content/_contact.html.erb:12:in `_app_views_shared_content__contact_html_erb__1088523403222405954_70143156604520'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1517355997471114777_70143154321420'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-25 23:10:23 -0800
+Processing by HomeController#index as HTML
+  Rendered shared/content/_about.html.erb (0.1ms)
+  Rendered shared/content/_who.html.erb (0.5ms)
+  Rendered shared/content/_contact.html.erb (12.0ms)
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Compiled bootstrap.css  (3ms)  (pid 1041)
+Compiled font-awesome.min.css  (2ms)  (pid 1041)
+Compiled home.css  (207ms)  (pid 1041)
+Compiled bootstrap_and_overrides.css  (4982ms)  (pid 1041)
+Compiled application.css  (5329ms)  (pid 1041)
+Compiled jquery.js  (9ms)  (pid 1041)
+Compiled jquery_ujs.js  (1ms)  (pid 1041)
+Compiled home.js  (250ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-transition.js  (2ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-alert.js  (4ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-modal.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (2ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (2ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-tab.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (2ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-popover.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-button.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (9ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap/bootstrap-affix.js  (1ms)  (pid 1041)
+Compiled twitter/bootstrap.js  (789ms)  (pid 1041)
+Compiled home.js  (1ms)  (pid 1041)
+Compiled application.js  (963ms)  (pid 1041)
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 7614ms (Views: 7613.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-25 23:10:31 -0800
+Served asset /bootstrap.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/contact.css?body=1" for 127.0.0.1 at 2013-01-25 23:10:31 -0800
+Served asset /contact.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-01-25 23:10:31 -0800
+Served asset /bootstrap_and_overrides.css - 200 OK (23ms)
+
+
+Started GET "/assets/font-awesome.min.css?body=1" for 127.0.0.1 at 2013-01-25 23:10:31 -0800
+Served asset /font-awesome.min.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /jquery.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /home.css - 200 OK (26ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (25ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (148ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (26ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (43ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (31ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (29ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (38ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (40ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (19ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:32 -0800
+Served asset /twitter/bootstrap.js - 200 OK (116ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:33 -0800
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (45ms)
+
+
+Started GET "/assets/contact.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:33 -0800
+Served asset /contact.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-01-25 23:10:33 -0800
+Served asset /home.js - 200 OK (10ms)
+
+
+Started GET "/assets/bg.png" for 127.0.0.1 at 2013-01-25 23:10:34 -0800
+Served asset /bg.png - 200 OK (50ms)
+
+
+Started GET "/assets/codegain-2.png" for 127.0.0.1 at 2013-01-25 23:10:34 -0800
+Served asset /codegain-2.png - 200 OK (36ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2013-01-25 23:10:34 -0800
+Served asset / - 404 Not Found (21ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.4) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/KayvonG/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/KayvonG/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)

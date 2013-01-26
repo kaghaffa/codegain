@@ -13,25 +13,25 @@ label {
         <fieldset class="fields">
           <div class="field span6 input-prepend">
             <span class="add-on"><i class="icon-user"></i></span>
-            <%= f.text_field :name, nil, placeholder: "Name" %>
+            <%= f.text_field :name, placeholder: "Name" %>
           </div>
           <div class="field span6 input-prepend">
             <span class="add-on"><i class="icon-envelope"></i></span>
-            <%= f.email_field(:user, nil, placeholder: "Email") %>
+            <%= f.email_field(:email, placeholder: "Email") %>
           </div>
           <div class="field span6 input-prepend">
             <span class="add-on"><i class="icon-comment-alt"></i></span>
-            <%= f.text_field :subject, nil, placeholder: "Subject"  %>
+            <%= f.text_field :subject, placeholder: "Subject"  %>
           </div>
           <div class="field span6 input-prepend">
             <span class="add-on"><i class="icon-comments"></i></span>
-            <%= f.text_area :message, nil, placeholder: "Message" %>
+            <%= f.text_area :body, placeholder: "Message" %>
           </div>
         </fieldset>
 
         <fieldset class="actions">
           <div class="span6">
-            <%= f.submit_tag "Send Message", id: "contact-form-submit" %>
+            <%= f.submit "Send Message", id: "contact-form-submit" %>
           </div> 
         </fieldset>
       <% end %>
