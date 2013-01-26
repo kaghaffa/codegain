@@ -2,6 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/** General styling **/
+.featurette {
+  color: white;
+  padding: 10em 5em;
+}
+
+/** Navbar **/
+.navbar {
+  opacity: 0.9;
+}
+
+/** About **/
+#about {
+  background-image: url("bg.png");
+}
+
+#splash {
+  text-align: center;
+}
+
+/** Who **/
+#who {
+  background-color: #eee;
+}
+
+/** Contact **/
+
+/** Contact form **/
 #contact-form {
   text-align: center;
 }

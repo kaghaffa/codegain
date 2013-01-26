@@ -1,0 +1,40 @@
+<style type="text/css">
+/** we'll move this out later **/
+label {
+  display: inline-block;
+}
+</style>
+
+<section id="contact">
+  <div class="container">
+    <div class="featurette">
+      <h2>Contact Us</h2>
+      <%= form_for @message do |f| %>
+        <fieldset class="fields">
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span>
+            <%= f.text_field :name, nil, placeholder: "Name" %>
+          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-envelope"></i></span>
+            <%= f.email_field(:user, nil, placeholder: "Email") %>
+          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comment-alt"></i></span>
+            <%= f.text_field :subject, nil, placeholder: "Subject"  %>
+          </div>
+          <div class="field span6 input-prepend">
+            <span class="add-on"><i class="icon-comments"></i></span>
+            <%= f.text_area :message, nil, placeholder: "Message" %>
+          </div>
+        </fieldset>
+
+        <fieldset class="actions">
+          <div class="span6">
+            <%= f.submit_tag "Send Message", id: "contact-form-submit" %>
+          </div> 
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</section>
