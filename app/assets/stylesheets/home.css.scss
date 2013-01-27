@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+::selection, ::-moz-selection {
+  background: #ff5f3f;
+  color: white;
+}
+
 /** General styling **/
 .featurette {
   color: white;
@@ -13,20 +18,56 @@
   opacity: 0.9;
 }
 
+.navbar-inverse .nav > li > a {
+  padding-bottom: 7px;
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0 10px;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus{
+  background-color: transparent;
+  border-bottom: 3px solid #ff5f3f;
+  padding-bottom: 7px;
+  padding-right: 0;
+  padding-left: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
 /** About **/
 #about {
-  background-image: url("bg.png");
+}
+
+#instructors {
+  padding: 5em 0;
+  color: black;
 }
 
 #splash {
   text-align: center;
 }
 
-/** Who **/
-#who {
-  background-color: #eee;
+.instructor-image {
+  text-align: center;
+  padding: 10px 0;
 }
 
+.instructor-bio {
+  padding: 10px 0;
+}
+
+.instructor-bio p {
+  line-height: 2em;
+}
+
+/** Who **/
+#who {
+  background-image: url("bg.jpg");
+  min-height: 500px;
+}
 /** Contact **/
 
 /** Contact form **/

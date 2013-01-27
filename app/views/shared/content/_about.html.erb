@@ -1,15 +1,37 @@
 <style type="text/css">
-  h2 {
-   font-weight: 300;
-   font-size: 4em;
-   letter-spacing: -1px;
+  #instructors h3 {
+    font-size: 2em;
+    text-align: center;
   }
 </style>
+
 <section id="about">
   <div class="container">
-    <div id="splash" class="featurette">
-      <h2>Making learning easy</h2>
-      <h3>We want our students to get excited about programming.</h3>
+    <div id="instructors" class="featurette">
+      <div>
+        <h3>Meet your instructors</h3>
+      </div>
+      <div class="instructor-list">
+        <div class="row">
+          <div id="kayvon-g" class="instructor-details span6">
+            <div class="instructor-image">
+              <%= image_tag("kayvon.png", :class => "featurette-image") %>
+            </div>
+            <div class="instructor-bio">
+              <p>A recent Computer Science graduate from UC San Diego, Kayvon now resides in his hometown of Cupertino where he is fully enjoying graduate life. Currently, he is a software engineer at HGST, a Western Digital Company. With a solid foundation in Computer Science, he now spends most of his free time continuing his learning with fun side projects in web and mobile app development. Opening his 10-year old brother's eyes to the world of programming inspired Kayvon to pursue this journey to not only share his knowledge of computer science to others, but also share his excitement and passion! His past accomplishments include a Microsoft U.S. Imagine Cup 1st place finish back in 2010, internships at Western Digital in 2010 and 2011, and several volunteer engineering projects through Teams In Engineering Services (TIES) during his years at UCSD.</p>
+            </div>
+          </div>
+          <div id="david-y" class="instructor-details span6">
+            <div class="instructor-image">
+              <%= image_tag("david.png", :class => "featurette-image") %>
+            </div>
+            <div class="instructor-bio">
+              <p>David is also a graduate from UC San Diego with a degree in Computer Science. He is currently one of the founders and full stack engineers at an early seed stage startup.  He has always been fascinated by computers and building new things ever since he was little. Now, he spends his free time creating new and exciting side projects on the web. In the past, David was a freelancer developing and designing sites for small businesses while having internships and part-time jobs at Cubic Corporation, Pint, and Mitchell International.  Programming is a realization of the thought process of the programmer. One of his personal goals is to help those who have the desire to learn more about computer science take that first step into thinking like a programmer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
