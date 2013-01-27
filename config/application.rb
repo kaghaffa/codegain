@@ -14,9 +14,9 @@ module Codegain
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "yourdomain.dev",
-      :user_name            => "from@yourdomain.dev",
-      :password             => "Super-Secure-Password",
+      :domain               => "gmail.com",
+      :user_name            => "kaghaffa@gmail.com",
+      :password             => "-",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
