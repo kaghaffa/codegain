@@ -21,3 +21,13 @@ $(function(){
   })
 
 });
+
+$(function() {
+  $('label').focusout(function() {
+    $(this).find('span').removeClass('test');
+  })
+  
+  $('label').focusin(function() {
+    $(this).find('span').addClass('test');
+  })
+});
