@@ -75,10 +75,6 @@
   text-align: center;
 }
 
-.field > label {
-  display: inline-table;
-}
-
 .field input {
   width: 400px;
   -moz-transition: background-color .3s;
@@ -130,4 +126,9 @@
 
 span.add-on.test {
   background-color: rgba(147, 114, 247, .5);
+}
+
+.featurette > h2 {
+  color: black;
+  text-align: center;
 }
