@@ -65,8 +65,10 @@
 
 /** Who **/
 #who {
-  background-image: url("bg.jpg");
-  min-height: 500px;
+  background: url("bg-test-3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 800px;
+  height: 100%;
 }
 /** Contact **/
 
