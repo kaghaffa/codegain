@@ -1,14 +1,7 @@
-<style type="text/css">
-/** we'll move this out later **/
-label {
-  display: inline-block;
-}
-</style>
-
 <section id="contact">
   <div class="container">
     <div class="featurette">
-      <h2>Contact Us</h2>
+      <h2>We know you'll have questions</h2>
       <%= form_for @message do |f| %>
         <fieldset class="fields">
           <div class="field span6 input-prepend">
@@ -40,7 +33,7 @@ label {
         <fieldset class="actions">
           <div class="span6">
             <%= f.submit "Send Message", id: "contact-form-submit" %>
-          </div> 
+          </div>
         </fieldset>
       <% end %>
     </div>

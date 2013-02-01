@@ -1,6 +1,30 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  font-weight: 300;
+  font-size: 4em;
+  letter-spacing: -1px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+h3 {
+  padding: 5px 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+label {
+  display: inline-block;
+}
+
+textarea {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-left-radius: 0px;
+  -moz-border-bottom-left-radius: 0px;
+}
 
 ::selection, ::-moz-selection {
   background: #ff5f3f;
@@ -10,7 +34,7 @@
 /** General styling **/
 .featurette {
   color: white;
-  padding: 10em 5em;
+  padding: 10em 0;
 }
 
 /** Navbar **/
@@ -39,38 +63,85 @@
 
 /** About **/
 #about {
+  background-color: #433626;
 }
 
 #instructors {
-  padding: 5em 0;
-  color: black;
+  color: #ffffdf;
 }
 
 #splash {
   text-align: center;
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 600px;
+  height: 100%;
+  width: inherit;
+}
+
+.instructor-list {
+  padding: 30px 0;
 }
 
 .instructor-image {
+  height: 165px;
   text-align: center;
-  padding: 10px 0;
+  padding: 30px 0;
 }
 
 .instructor-bio {
   padding: 10px 0;
 }
 
+.instructor-bio h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .instructor-bio p {
   line-height: 2em;
 }
 
-/** Who **/
-#who {
-  background: url("bg-test-3.jpg") no-repeat center center fixed;
-  background-size: cover;
-  min-height: 800px;
-  height: 100%;
+/** Program **/
+#program {
+  width: 100%;
 }
+
+.emp {
+  font-style: italic;
+}
+
+#program .row {
+  padding: 30px 0;
+}
+
+#desc {
+  background: #333;
+}
+
+#desc h2, #desc h3 {
+  text-align: center;
+}
+
+.holder {
+  display: table;
+  width: inherit;
+}
+
+.holder i {
+  font-size: 5em;
+  color: #ff5f3f;
+}
+
+.holder p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 /** Contact **/
+#contact {
+  background-color: #333;
+}
 
 /** Contact form **/
 #contact-form {
