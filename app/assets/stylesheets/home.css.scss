@@ -13,17 +13,11 @@ h3 {
   padding: 5px 0;
   font-size: 1.5em;
   font-weight: 300;
+  text-align: center;
 }
 
 label {
   display: inline-block;
-}
-
-textarea {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  -moz-border-left-radius: 0px;
-  -moz-border-bottom-left-radius: 0px;
 }
 
 ::selection, ::-moz-selection {
@@ -144,7 +138,12 @@ textarea {
 }
 
 /** Contact form **/
-#contact-form {
+
+#form-container {
+  padding: 50px 0;
+}
+
+#new_message {
   text-align: center;
 }
 
@@ -154,6 +153,8 @@ textarea {
 
 .field input {
   width: 400px;
+  height: 35px;
+  padding: 5px 15px;
   -moz-transition: background-color .3s;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
@@ -165,10 +166,11 @@ textarea {
 
 #message_body {
   width: 400px;
-  height: 75px;
+  height: 100px;
   -moz-transition: background-color .3s;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
+  padding: 10px 15px;
 }
 
 #message_body:focus {
@@ -176,7 +178,7 @@ textarea {
 }
 
 #contact-form-submit {
-  width: 445px;
+  width: 432px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9372F7), color-stop(100%, #6443C9));
   color: #100F14;
   border: none;
