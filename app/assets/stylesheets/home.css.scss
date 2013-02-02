@@ -157,7 +157,8 @@ label {
 }
 
 .field input:focus {
-  background-color: rgba(153, 156, 203, .2);
+  border: 10px, solid, rgb(255, 145, 123);
+  background: white;
 }
 
 #message_body {
@@ -170,12 +171,13 @@ label {
 }
 
 #message_body:focus {
-  background-color: rgba(153, 156, 203, .2);
+  background: white;
+  border-color: rgb(255, 145, 123);
 }
 
 #contact-form-submit {
   width: 432px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9372F7), color-stop(100%, #6443C9));
+  background: rgba(255, 95, 63, .8);
   color: #100F14;
   border: none;
   border: transparent;
@@ -184,7 +186,7 @@ label {
 }
 
 #contact-form-submit:hover {
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6443C9), color-stop(100%, #9372F7));
+  background: rgba(255, 95, 63, 1);
 }
 
 .input-prepend .message {
@@ -204,17 +206,43 @@ span.add-on.test {
 }
 
 .featurette > h2 {
-text-align: center;
+  text-align: center;
 }
 
-.checkboxes {
-  padding-bottom: 10px;
+#checkboxes {
+  margin: 10px;
+  text-align: center;
 }
 
-.checkboxes label {
-  padding-left: 10px;
+input[type='checkbox']:checked + label {
+  color: rgba(255, 95, 63, 1);
 }
 
-.checkboxes label:first-child {
-  
+#checkboxes label {
+  padding-left: 5px;
+  font-size: 18px;
 }
+
+#checkboxes > label:hover {
+  color: rgba(255, 95, 63, 1);
+}
+
+#checkboxes label:first-child {
+  padding-left: 0px;
+  color: white;
+}
+
+#checkboxes > input {
+  margin-left: 15px;
+}
+
+
+#select-box {
+  margin-top: 10px;
+}
+
+#select-box > label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+

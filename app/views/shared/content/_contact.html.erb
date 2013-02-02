@@ -34,16 +34,22 @@ label {
                     <%= f.text_area :body, placeholder: "Message", rows: 10 %>
                   </label>
                 </div>
-                <div class="span12 checkboxes">
-                  <%= label_tag "Interests:" %>
-                  <%= label_tag "interests[java]", "Java" %>
+                <div id="select-box">
+                  <%= label_tag "I want to..." %>
+                  <%= f.select :reason_for_inquiry, options_for_select([["get more information", "info"],
+                                                                        ["be a student", "student"], 
+                                                                        ["be a tutor", "tutor"]], @message.reason_for_inquiry) %>
+                </div>
+                <div id="checkboxes">
+                  <%= label_tag "I am interested in:" %>
                   <%= check_box "interests", "java" %>
-                  <%= label_tag "interests[web]", "Web Design" %>
+                  <%= label_tag "interests[java]", "Java" %>
                   <%= check_box "interests", "web" %>
-                  <%= label_tag "interests[ios]", "iOS" %>
+                  <%= label_tag "interests[web]", "Web" %>
                   <%= check_box "interests", "ios" %>
+                  <%= label_tag "interests[ios]", "iOS" %>
+                  <%= check_box "interests", "android" %>                  
                   <%= label_tag "interests[android]", "Android" %>
-                  <%= check_box "interests", "android" %>
                 </div>
               </fieldset>
               <fieldset>
