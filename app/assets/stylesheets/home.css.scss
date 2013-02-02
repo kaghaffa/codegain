@@ -134,13 +134,25 @@ label {
 
 /** Contact **/
 #contact {
-  background-color: #333;
+  background-color: #234349;
 }
 
 /** Contact form **/
 
 #form-container {
   padding: 50px 0;
+}
+
+#form-container .row > div {
+  padding: 25px 0;
+  border: 1px black white;
+  background-color: white;
+  text-align: center;
+}
+
+#form-container h4 {
+  margin-bottom: 25px;
+  color: #6FBFF2;
 }
 
 #new_message {
@@ -161,7 +173,8 @@ label {
 }
 
 .field input:focus {
-  background-color: rgba(153, 156, 203, .2);
+  /*background-color: rgba(153, 156, 203, .2);*/
+  background-color: #c8e1e6;
 }
 
 #message_body {
@@ -174,7 +187,8 @@ label {
 }
 
 #message_body:focus {
-  background-color: rgba(153, 156, 203, .2);
+  /*background-color: rgba(153, 156, 203, .2);*/
+  background-color: #c8e1e6;
 }
 
 #contact-form-submit {
@@ -189,18 +203,6 @@ label {
 
 #contact-form-submit:hover {
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6443C9), color-stop(100%, #9372F7));
-}
-
-.input-prepend .message {
-  height: 75px;
-}
-
-.input-prepend .add-on:hover {
-  background-color: rgba(147, 114, 247, .5);
-}
-
-.input-prepend .add-on:focus {
-  background-color: rgba(147, 114, 247, .5);
 }
 
 span.add-on.test {
