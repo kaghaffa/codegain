@@ -134,7 +134,7 @@ label {
 
 /** Contact **/
 #contact {
-  background-color: #234349;
+  background-color: #316586;
 }
 
 /** Contact form **/
@@ -146,7 +146,7 @@ label {
 #form-container .row > div {
   padding: 25px 0;
   border: 1px black white;
-  background-color: white;
+  background-color: #f2efe2;
   text-align: center;
 }
 
@@ -172,7 +172,6 @@ label {
   /*background-color: rgba(153, 156, 203, .2);*/
   background-color: #c8e1e6;
   border: 10px, solid, rgb(255, 145, 123);
-  background: white;
 }
 
 #message_body {
@@ -187,18 +186,17 @@ label {
 #message_body:focus {
   /*background-color: rgba(153, 156, 203, .2);*/
   background-color: #c8e1e6;
-  background: white;
-  border-color: rgb(255, 145, 123);
 }
 
 #contact-form-submit {
-  width: 432px;
+  width: 200px;
   background: rgba(255, 95, 63, .8);
   color: #100F14;
   border: none;
   border: transparent;
   border-radius: 5px;
-  padding: 0.64286em 1.71429em 0.64286em 1.71429em;
+  padding: 20px;
+  margin-top: 25px;
 }
 
 #contact-form-submit:hover {
@@ -218,13 +216,10 @@ span.add-on.test {
   text-align: center;
 }
 
-input[type='checkbox']:checked + label {
-  color: rgba(255, 95, 63, 1);
-}
-
 #checkboxes label {
   padding-left: 5px;
   font-size: 18px;
+  color: black;
 }
 
 #checkboxes > label:hover {
@@ -233,13 +228,13 @@ input[type='checkbox']:checked + label {
 
 #checkboxes label:first-child {
   padding-left: 0px;
-  color: white;
+  color: black;
 }
 
 #checkboxes > input {
   margin-left: 15px;
+  margin-top: 0;
 }
-
 
 #select-box {
   margin-top: 10px;
@@ -248,5 +243,9 @@ input[type='checkbox']:checked + label {
 #select-box > label {
   margin-right: 10px;
   font-size: 18px;
+  color: black;
 }
 
+input[type='checkbox']:checked + label {
+  color: rgba(255, 95, 63, 1) !important;
+}
