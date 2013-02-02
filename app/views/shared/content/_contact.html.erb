@@ -34,6 +34,17 @@ label {
               <%= f.text_area :body, placeholder: "Message" %>
             </label>
           </div>
+          <div class="span6 checkboxes">
+            <%= label_tag "Interests:" %>
+            <%= label_tag "interests[java]", "Java" %>
+            <%= check_box "interests", "java" %>
+            <%= label_tag "interests[web]", "Web Design" %>
+            <%= check_box "interests", "web" %>
+            <%= label_tag "interests[ios]", "iOS" %>
+            <%= check_box "interests", "ios" %>
+            <%= label_tag "interests[android]", "Android" %>
+            <%= check_box "interests", "android" %>
+          </div>
         </fieldset>
 
         <fieldset class="actions">
