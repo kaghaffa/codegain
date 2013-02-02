@@ -8,51 +8,53 @@ label {
   <div class="container">
     <div class="featurette">
       <h2>We know you'll have questions</h2>
-      <%= form_for @message do |f| %>
-        <fieldset class="fields">
-          <div class="field span6 input-prepend">
-            <label for="message_name">
-              <span class="add-on"><i class="icon-user"></i></span>
-              <%= f.text_field :name, placeholder: "Name" %>
-            </label>
+      <h3>Feel free to contact us at any time.</h3>
+      <div id="form-container">
+        <div class="row">
+          <div class="span12">
+            <%= form_for @message do |f| %>
+              <fieldset>
+                <div class="field">
+                  <label for="message_name">
+                    <%= f.text_field :name, placeholder: "Name" %>
+                  </label>
+                </div>
+                <div class="field">
+                  <label for="message_email">
+                    <%= f.email_field(:email, placeholder: "Email") %>
+                  </label>
+                </div>
+                <div class="field">
+                  <label for="message_subject">
+                    <%= f.text_field :subject, placeholder: "Subject"  %>
+                  </label>
+                </div>
+                <div class="field">
+                  <label for="message_body">
+                    <%= f.text_area :body, placeholder: "Message", rows: 10 %>
+                  </label>
+                </div>
+                <div class="span12 checkboxes">
+                  <%= label_tag "Interests:" %>
+                  <%= label_tag "interests[java]", "Java" %>
+                  <%= check_box "interests", "java" %>
+                  <%= label_tag "interests[web]", "Web Design" %>
+                  <%= check_box "interests", "web" %>
+                  <%= label_tag "interests[ios]", "iOS" %>
+                  <%= check_box "interests", "ios" %>
+                  <%= label_tag "interests[android]", "Android" %>
+                  <%= check_box "interests", "android" %>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div>
+                  <%= f.submit "Send Message", id: "contact-form-submit" %>
+                </div>
+              </fieldset>
+            <% end %>
           </div>
-          <div class="field span6 input-prepend">
-            <label for="message_email">
-              <span class="add-on"><i class="icon-envelope"></i></span>
-              <%= f.email_field(:email, placeholder: "Email") %>
-            </label>
-          </div>
-          <div class="field span6 input-prepend">
-            <label for="message_subject">
-              <span class="add-on"><i class="icon-comment-alt"></i></span>
-              <%= f.text_field :subject, placeholder: "Subject"  %>
-            </label>
-          </div>
-          <div class="field span6 input-prepend">
-            <label for="message_body">
-              <span class="message add-on"><i class="icon-comments"></i></span>
-              <%= f.text_area :body, placeholder: "Message" %>
-            </label>
-          </div>
-          <div class="span6 checkboxes">
-            <%= label_tag "Interests:" %>
-            <%= label_tag "interests[java]", "Java" %>
-            <%= check_box "interests", "java" %>
-            <%= label_tag "interests[web]", "Web Design" %>
-            <%= check_box "interests", "web" %>
-            <%= label_tag "interests[ios]", "iOS" %>
-            <%= check_box "interests", "ios" %>
-            <%= label_tag "interests[android]", "Android" %>
-            <%= check_box "interests", "android" %>
-          </div>
-        </fieldset>
-
-        <fieldset class="actions">
-          <div class="span6">
-            <%= f.submit "Send Message", id: "contact-form-submit" %>
-          </div>
-        </fieldset>
-      <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </section>
