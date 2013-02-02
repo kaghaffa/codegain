@@ -4,9 +4,9 @@ class Message
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :subject, :body
+  attr_accessor :name, :email, :subject, :body, :reason_for_inquiry, :interests
 
-  validates :name, :email, :subject, :body, :presence => true
+  validates :name, :email, :subject, :body, :interests, :reason_for_inquiry, :presence => true
   validates :email, :format => { :with => %r{.+@.+\..+} }, :allow_blank => true
   
   def initialize(attributes = {})
