@@ -42,13 +42,13 @@ label {
                 </div>
                 <div id="checkboxes">
                   <%= label_tag "I am interested in:" %>
-                  <%= check_box "interests", "java" %>
+                  <%= check_box "interests", :java %>
                   <%= label_tag "interests[java]", "Java" %>
-                  <%= check_box "interests", "web" %>
+                  <%= check_box "interests", :web %>
                   <%= label_tag "interests[web]", "Web" %>
-                  <%= check_box "interests", "ios" %>
+                  <%= check_box "interests", :ios %>
                   <%= label_tag "interests[ios]", "iOS" %>
-                  <%= check_box "interests", "android" %>                  
+                  <%= check_box "interests", :android %>                  
                   <%= label_tag "interests[android]", "Android" %>
                 </div>
               </fieldset>
