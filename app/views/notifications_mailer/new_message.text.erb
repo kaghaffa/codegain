@@ -6,6 +6,10 @@ Subject: <%= @message.subject %>
 
 Body: <%= @message.body %>
 
-Reason for Inquiry: <%= @message.reason_for_inquiry
+Reason for Inquiry: <%= @message.reason_for_inquiry %>
 
-Interests: <%= @message.interests %>
+Interests: 
+
+<% @message.interests.each do |interests_hash| %>
+<%= interests_hash[0] if interests_hash[1] == "1" %>
+<% end %>
