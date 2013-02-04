@@ -11,28 +11,21 @@ label {
       <h3>Feel free to contact us at any time.</h3>
       <div id="form-container">
         <div class="row">
-          <div class="span12">
+          <div class="span6 offset3">
+            <h4><i class="icon-envelope-alt icon-4x"></i></h4>
             <%= form_for @message do |f| %>
               <fieldset>
                 <div class="field">
-                  <label for="message_name">
-                    <%= f.text_field :name, placeholder: "Name" %>
-                  </label>
+                  <%= f.text_field :name, placeholder: "Name" %>
                 </div>
                 <div class="field">
-                  <label for="message_email">
-                    <%= f.email_field(:email, placeholder: "Email") %>
-                  </label>
+                  <%= f.email_field(:email, placeholder: "Email") %>
                 </div>
                 <div class="field">
-                  <label for="message_subject">
-                    <%= f.text_field :subject, placeholder: "Subject"  %>
-                  </label>
+                  <%= f.text_field :subject, placeholder: "Subject"  %>
                 </div>
                 <div class="field">
-                  <label for="message_body">
-                    <%= f.text_area :body, placeholder: "Message", rows: 10 %>
-                  </label>
+                  <%= f.text_area :body, placeholder: "Message", rows: 10 %>
                 </div>
                 <div id="select-box">
                   <%= label_tag "I want to..." %>
