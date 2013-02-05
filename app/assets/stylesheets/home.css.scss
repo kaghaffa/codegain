@@ -20,6 +20,10 @@ label {
   display: inline-block;
 }
 
+textarea {
+  border: none;
+}
+
 .notice {
   color: rgba(255, 95, 63, 0.8);
   width: 500px;
@@ -141,6 +145,10 @@ label {
 
 #desc h2, #desc h3 {
   text-align: center;
+}
+
+#perks {
+  padding-top: 50px;
 }
 
 .holder {
@@ -277,11 +285,12 @@ input[type='checkbox']:checked + label {
   color: rgba(255, 95, 63, 1) !important;
 }
 
-label.error { 
+label.error {
   float: none;
-  color: red; 
+  color: red;
   margin-left: 0px;
-  padding-left: .5em; 
-  vertical-align: top; 
+  padding-left: .5em;
+  vertical-align: top;
   width: 400px;
+  padding: 10px 0;
 }
