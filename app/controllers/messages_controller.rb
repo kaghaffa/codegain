@@ -10,10 +10,10 @@ class MessagesController < ApplicationController
 
     if @message.valid?
       NotificationsMailer.new_message(@message).deliver
-      redirect_to(root_path, :notice => "Message was successfully sent.")
+      redirect_to(root_path, :notice => "Message sent. We will respond within 24 hours!")
     else
       flash.now.alert = "Please fill all fields"
-      redirect_to messages_path
+      redirect_to root_path
     end
   end
 

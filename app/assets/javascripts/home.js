@@ -23,6 +23,12 @@ $(function(){
 });
 
 $(function() {
+   $('.notice').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+   });
+});
+
+$(function() {
   $('label').focusout(function() {
     $(this).find('span').removeClass('test');
   })
@@ -30,4 +36,8 @@ $(function() {
   $('label').focusin(function() {
     $(this).find('span').addClass('test');
   })
+});
+
+$(document).ready(function(){
+  $("#new_message").validate();
 });

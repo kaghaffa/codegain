@@ -16,13 +16,13 @@ label {
             <%= form_for @message do |f| %>
               <fieldset>
                 <div class="field">
-                  <%= f.text_field :name, placeholder: "Name" %>
+                  <%= f.text_field :name, placeholder: "Name *", :class => "required", :autocomplete => "off" %>
                 </div>
                 <div class="field">
-                  <%= f.email_field(:email, placeholder: "Email") %>
+                  <%= f.email_field :email, placeholder: "Email *", :class => "required", :autocomplete => "off" %>
                 </div>
                 <div class="field">
-                  <%= f.text_field :subject, placeholder: "Subject"  %>
+                  <%= f.text_field :subject, placeholder: "Subject *", :class => "required", :autocomplete => "off"  %>
                 </div>
                 <div class="field">
                   <%= f.text_area :body, placeholder: "Message", rows: 10 %>
