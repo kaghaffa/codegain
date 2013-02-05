@@ -90,10 +90,21 @@ label {
 .instructor-bio h3 {
   text-align: center;
   padding-bottom: 20px;
+  font-size: 2em;
+  letter-spacing: 2px;
 }
 
 .instructor-bio p {
-  line-height: 2em;
+  line-height: 35px;
+}
+
+#instructor-quote p {
+  padding: 25px 0;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 55px;
+  font-style: italic;
 }
 
 /** Program **/
@@ -146,8 +157,9 @@ label {
 #form-container .row > div {
   padding: 25px 0;
   border: 1px black white;
-  background-color: #f2efe2;
+  background-color: #1C445D;
   text-align: center;
+  border-radius: 10px;
 }
 
 #form-container h4 {
@@ -170,7 +182,7 @@ label {
 
 .field input:focus {
   /*background-color: rgba(153, 156, 203, .2);*/
-  background-color: #c8e1e6;
+  /*background-color: #c8e1e6;*/
   border: 10px, solid, rgb(255, 145, 123);
 }
 
@@ -185,13 +197,13 @@ label {
 
 #message_body:focus {
   /*background-color: rgba(153, 156, 203, .2);*/
-  background-color: #c8e1e6;
+  /*background-color: #c8e1e6;*/
 }
 
 #contact-form-submit {
   width: 200px;
   background: rgba(255, 95, 63, .8);
-  color: #100F14;
+  color: white;
   border: none;
   border: transparent;
   border-radius: 5px;
@@ -219,7 +231,7 @@ span.add-on.test {
 #checkboxes label {
   padding-left: 5px;
   font-size: 18px;
-  color: black;
+  color: white;
 }
 
 #checkboxes > label:hover {
@@ -228,7 +240,7 @@ span.add-on.test {
 
 #checkboxes label:first-child {
   padding-left: 0px;
-  color: black;
+  color: white;
 }
 
 #checkboxes > input {
@@ -243,7 +255,7 @@ span.add-on.test {
 #select-box > label {
   margin-right: 10px;
   font-size: 18px;
-  color: black;
+  color: white;
 }
 
 input[type='checkbox']:checked + label {
