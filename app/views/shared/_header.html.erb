@@ -3,6 +3,11 @@
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="#"><%= image_tag("codegain.png") %></a>
+        <% if flash[:notice] %>
+          <div class="notice">
+            <i class="icon-ok-sign"></i> <%= flash[:notice] %> 
+          </div>
+        <% end %>
         <ul class="nav pull-right">
           <li class="active"><a href="#program">Program</a></li>
           <li><a href="#about">About Us</a></li>
@@ -11,4 +16,6 @@
       </div>
     </div>
   </div>
+  </div
+
 </header>

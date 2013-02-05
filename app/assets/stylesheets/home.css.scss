@@ -20,6 +20,21 @@ label {
   display: inline-block;
 }
 
+.notice {
+  color: rgba(255, 95, 63, 0.8);
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 21px;
+  padding: 5px;
+  -moz-transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  position: absolute;
+  right: 33%;
+  top: 15px;
+}
+
 ::selection, ::-moz-selection {
   background: #ff5f3f;
   color: white;
@@ -260,4 +275,13 @@ span.add-on.test {
 
 input[type='checkbox']:checked + label {
   color: rgba(255, 95, 63, 1) !important;
+}
+
+label.error { 
+  float: none;
+  color: red; 
+  margin-left: 0px;
+  padding-left: .5em; 
+  vertical-align: top; 
+  width: 400px;
 }
