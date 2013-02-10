@@ -20,6 +20,10 @@ label {
   display: inline-block;
 }
 
+textarea {
+  border: none;
+}
+
 .notice {
   color: rgba(255, 95, 63, 0.8);
   width: 500px;
@@ -143,6 +147,10 @@ label {
   text-align: center;
 }
 
+#perks {
+  padding-top: 50px;
+}
+
 .holder {
   display: table;
   width: inherit;
@@ -198,7 +206,7 @@ label {
 .field input:focus {
   /*background-color: rgba(153, 156, 203, .2);*/
   /*background-color: #c8e1e6;*/
-  border: 10px, solid, rgb(255, 145, 123);
+  border: 10px solid rgb(255, 145, 123);
 }
 
 #message_body {
@@ -277,11 +285,12 @@ input[type='checkbox']:checked + label {
   color: rgba(255, 95, 63, 1) !important;
 }
 
-label.error { 
+label.error {
   float: none;
-  color: red; 
+  color: red;
   margin-left: 0px;
-  padding-left: .5em; 
-  vertical-align: top; 
+  padding-left: .5em;
+  vertical-align: top;
   width: 400px;
+  padding: 10px 0;
 }

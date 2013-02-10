@@ -2,4 +2,4 @@
 
 # Ignore cache
 tmp/**/*
-log/**
+*.log
