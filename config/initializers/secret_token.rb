@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Codegain::Application.config.secret_token = '7182f904e1fb5b26108608b7aca0abc265bc26e21fc4bf2bc353e1f7613be860aa17b188ea3d3ccec88a29a2583888d95fa10bd8af1ac06dc2f72d0f80139b64'
+Codegain::Application.config.secret_token = 'de7d6e056ccd7f825e58befe3523ea9ab879b2e06e42f6def2920b82f5a85e8c53c351ac4355f7e6ff2f493a1dffc8fd1920b04ca10ad01aca18ab6cce171b81'
