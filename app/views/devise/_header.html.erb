@@ -1,5 +1,5 @@
 <header>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
       <div class="container">
         <a class="brand" href="#"><%= image_tag("codegain.png") %></a>
@@ -9,12 +9,14 @@
           </div>
         <% end %>
         <ul class="nav pull-right">
-          <li class="active"><a href="#program">Program</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>
-  </div>
   </div>
 </header>

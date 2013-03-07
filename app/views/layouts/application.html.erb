@@ -11,11 +11,30 @@
 </head>
 <body>
 
-<div id="main">
-  <%= render "shared/header" %>
-  <%= yield %>
-  <%= render "shared/footer" %>
-</div>
-
+<% if params[:controller] == 'devise/sessions' || params[:controller] == 'devise/registrations' %>
+  <div id="main" class="backend">
+    <%= render "devise/header" %>
+    <section id="auth">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+  </div>
+<% elsif params[:controller] == 'dashboard' %>
+  <div id="main" class="backend">
+    <%= render "devise/header" %>
+    <section id="dashboard">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+  </div>
+<% else %>
+  <div id="main">
+    <%= render "shared/header" %>
+    <%= yield %>
+    <%= render "shared/footer" %>
+  </div>
+<% end %>
 </body>
 </html>
