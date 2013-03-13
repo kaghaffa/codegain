@@ -349,3 +349,76 @@ html, body {
   width: 264px;
   padding: 10px 0;
 }
+
+// Dashboard styling
+#dashboard-home {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#week-buttons-left {
+  float: left;
+  width: 400px;
+}
+
+#week-buttons-right {
+  float: center;
+  text-align: center;
+}
+
+.dashboard-link {
+  background: rgba(255, 95, 63, .8);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border: transparent;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100px;
+}
+
+.dashboard-link-grayed{
+  background: rgba(148, 128, 124, 0.8);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border: transparent;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+.last-link {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.dashboard-link:hover {
+  background: rgba(255, 95, 63, 1);
+}
+
+#dashboard-home h2 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+#week-buttons .row .span6 .button_to{
+  float: left;
+  padding-right: 10px;
+}
+
+#week-buttons a {
+  float: center;
+  background: rgba(125, 146, 214, 0.8);
+  color: white;
+  font-size: 12px;
+  border: none;
+  border: transparent;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#week-buttons a:hover{
+  background: rgba(125, 146, 214, 1);
+}
+
