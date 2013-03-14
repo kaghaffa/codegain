@@ -166,6 +166,54 @@ textarea {
   vertical-align: middle;
 }
 
+/** Pricing **/
+#pricing {
+  background-color: #872A0C;
+}
+
+#pricing .span6 {
+  margin-left: 0;
+  background-color: #EDDBAC;
+  padding: 10px 10px 50px 15px;
+}
+
+#pricing .last {
+  margin-left: 10px;
+}
+
+#pricing .desc {
+  color: #2D2D2F;
+  padding: 5px 0 25px 0;
+}
+
+#pricing h2, #pricing h3 {
+  color: white;
+}
+
+#pricing h3 {
+  padding: 25px 0;
+}
+
+#pricing h4 {
+  color: black;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 25px 0;
+}
+
+#pricing i {
+  font-size: 3em;
+  color: #946E49;
+}
+
+#pricing .holder p {
+  color: black;
+  display: table;
+  margin-top: 10px;
+}
+
+
 /** Contact **/
 #contact {
   background-color: #316586;
