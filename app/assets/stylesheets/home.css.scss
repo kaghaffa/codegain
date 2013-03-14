@@ -397,3 +397,61 @@ html, body {
   width: 264px;
   padding: 10px 0;
 }
+
+// Dashboard styling
+#dashboard {
+  background-color: rgba(52, 152, 219, 1);
+}
+
+#dashboard-home {
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+#dashboard-home h2 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+#dashboard-materials a {
+  background: rgba(100, 71, 65, 0.8);
+  color: white;
+  border: none;
+  border: transparent;
+  padding: 10px;
+  -moz-transition: background-color .3s;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+#dashboard-materials a:hover {
+  background: rgba(255, 95, 63, 1); 
+  text-decoration: none;
+}
+
+#dashboard-materials table {
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(236, 240, 241, 1);
+  margin-bottom: 50px;
+}
+
+#dashboard-materials table thead {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dashboard-materials table tr td:first-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dashboard-materials table tr td{
+  text-align: center;
+  line-height: 40px;
+}
+
+#dashboard-materials table tr:hover{
+  color: rgb(92, 35, 35);
+  line-height: 40px;
+}
