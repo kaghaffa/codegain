@@ -351,50 +351,13 @@ html, body {
 }
 
 // Dashboard styling
+#dashboard {
+  background-color: rgba(52, 152, 219, 1);
+}
+
 #dashboard-home {
   margin: 0 auto;
-  margin-top: 100px;
-}
-
-#week-buttons-left {
-  float: left;
-  width: 400px;
-}
-
-#week-buttons-right {
-  float: center;
-  text-align: center;
-}
-
-.dashboard-link {
-  background: rgba(255, 95, 63, .8);
-  color: white;
-  font-size: 24px;
-  border: none;
-  border: transparent;
-  border-radius: 5px;
-  padding: 20px;
-  width: 100px;
-}
-
-.dashboard-link-grayed{
-  background: rgba(148, 128, 124, 0.8);
-  color: white;
-  font-size: 24px;
-  border: none;
-  border: transparent;
-  border-radius: 5px;
-  padding: 20px;
-
-}
-
-.last-link {
-  padding-right: 14px;
-  padding-left: 14px;
-}
-
-.dashboard-link:hover {
-  background: rgba(255, 95, 63, 1);
+  margin-top: 75px;
 }
 
 #dashboard-home h2 {
@@ -402,23 +365,45 @@ html, body {
   margin-bottom: 50px;
 }
 
-#week-buttons .row .span6 .button_to{
-  float: left;
-  padding-right: 10px;
-}
-
-#week-buttons a {
-  float: center;
-  background: rgba(125, 146, 214, 0.8);
+#dashboard-materials a {
+  background: rgba(100, 71, 65, 0.8);
   color: white;
-  font-size: 12px;
   border: none;
   border: transparent;
-  border-radius: 5px;
   padding: 10px;
+  -moz-transition: background-color .3s;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
-#week-buttons a:hover{
-  background: rgba(125, 146, 214, 1);
+#dashboard-materials a:hover {
+  background: rgba(255, 95, 63, 1); 
+  text-decoration: none;
 }
 
+#dashboard-materials table {
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(236, 240, 241, 1);
+  margin-bottom: 50px;
+}
+
+#dashboard-materials table thead {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dashboard-materials table tr td:first-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dashboard-materials table tr td{
+  text-align: center;
+  line-height: 40px;
+}
+
+#dashboard-materials table tr:hover{
+  color: rgb(92, 35, 35);
+  line-height: 40px;
+}
