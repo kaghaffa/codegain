@@ -153,7 +153,7 @@ textarea {
 
 .holder {
   display: table;
-  width: inherit;
+  width: 100%;
 }
 
 .holder i {
@@ -168,13 +168,13 @@ textarea {
 
 /** Pricing **/
 #pricing {
-  background-color: #872A0C;
+  // background-color: #872A0C;
+  background-color: #70584B;
 }
 
-#pricing .span6 {
-  margin-left: 0;
-  background-color: #EDDBAC;
-  padding: 10px 10px 50px 15px;
+#pricing .span-container {
+  background-color: #F0E6B1;
+  margin-top: 45px;
 }
 
 #pricing .last {
@@ -182,8 +182,15 @@ textarea {
 }
 
 #pricing .desc {
-  color: #2D2D2F;
+  color: black;
   padding: 5px 0 25px 0;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 10px 10px 50px 15px;
+}
+
+#pricing .row-container {
+  padding: 10px 10px 50px 15px;
 }
 
 #pricing h2, #pricing h3 {
@@ -200,19 +207,34 @@ textarea {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 25px 0;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 #pricing i {
   font-size: 3em;
-  color: #946E49;
+  color: #70584B;
 }
 
 #pricing .holder p {
   color: black;
   display: table;
   margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
+#pricing .price {
+  background-color: #3D3536;
+  text-align: center;
+  margin: 25px 0;
+  padding: 35px 0;
+  font-size: 2.5em;
+}
+
+#pricing #intangibles {
+  padding-bottom: 30px;
+}
 
 /** Contact **/
 #contact {
@@ -425,7 +447,7 @@ html, body {
 }
 
 #dashboard-materials a:hover {
-  background: rgba(255, 95, 63, 1); 
+  background: rgba(255, 95, 63, 1);
   text-decoration: none;
 }
 

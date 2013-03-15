@@ -3,12 +3,11 @@ $(function(){
   var heights = [];
 
   for( var i in sections ) {
-    heights.push(sections[i].offsetHeight - 64);
+    heights.push(sections[i].offsetHeight - 32);
   }
 
   $(window).scroll(function() {
 
-    console.log('removing class');
     $('.nav li.active').removeClass('active');
 
     var scroll = $(window).scrollTop();
@@ -20,7 +19,7 @@ $(function(){
     } else if( (scroll >= (heights[0] + heights[1])) && (scroll <= (heights[0] + heights[1] + heights[2]))) {
       $('.nav li').slice(2, 3).addClass('active');
     } else {
-      $('.nav li').last().addClass('active');
+      $('.nav li').slice(-1).addClass('active');
     }
   })
 });
