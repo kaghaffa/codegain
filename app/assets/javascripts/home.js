@@ -3,7 +3,7 @@ $(function(){
   var heights = [];
 
   for( var i in sections ) {
-    heights.push(sections[i].offsetHeight - 32);
+    heights.push(sections[i].offsetHeight - 64);
   }
 
   $(window).scroll(function() {
