@@ -7,5 +7,4 @@ class NotificationsMailer < ActionMailer::Base
     @message = message
     mail(:subject => "[codegain] #{message.subject}  |  #{Time.now.to_s[0..18]}")
   end
-
 end
