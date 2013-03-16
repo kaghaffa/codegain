@@ -24,8 +24,22 @@
   <div id="main" class="backend">
     <%= render "devise/header" %>
     <section id="dashboard">
-      <div class="container">
-        <%= yield %>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3">
+            <div class="well sidebar-nav sidebar-nav-fixed">
+              <ul class="">
+                <li><a href="#">Class Materials</a></li>
+                <li><a href="#">Supplementary Resources</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Help + Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="span9">
+            <%= yield %>
+          </div>
+        </div>
       </div>
     </section>
   </div>

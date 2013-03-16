@@ -9,6 +9,21 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  has_one :user_role
-  has_one :role, :through => :user_role
+  after_create :send_admin_mail
+
+  def active_for_authentication?
+    super && approved?
+  end
+
+  def inactive_message
+    if !approved?
+      :not_approved
+    else
+      super
+    end
+  end
+
+  def send_admin_mail
+    AdminMailer.new_user_waiting_for_approval(self).deliver
+  end
 end
