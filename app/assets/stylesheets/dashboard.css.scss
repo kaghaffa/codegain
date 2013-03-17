@@ -1,3 +1,51 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+li {
+  list-style: none;
+}
+
+.backend {
+  height: auto;
+  background-color: #393d40;
+}
+
+#error_explanation h2 {
+  font-size: 17px;
+  line-height: 25px;
+  margin: 25px 0;
+  font-weight: 400;
+  color: red;
+}
+
+#error_explanation ul li {
+  color: red;
+  text-align: left;
+}
+
+/* Sidebar */
+.sidebar-nav-fixed {
+  position: fixed;
+  top: 240px;
+  width:20%;
+}
+
+.sidebar-nav ul li{
+  padding: 10px 0;
+  text-transform: uppercase;
+
+}
+
+@media (max-width: 767px) {
+   .sidebar-nav-fixed {
+      position: static;
+      width:auto;
+   }
+ }
+
+ @media (max-width: 979px) {
+   .sidebar-nav-fixed {
+      width: auto;
+   }
+ }
