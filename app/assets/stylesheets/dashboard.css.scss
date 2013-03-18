@@ -1,11 +1,6 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-li {
-  list-style: none;
-}
-
 .backend {
   height: auto;
   background-color: #393d40;
@@ -34,7 +29,7 @@ li {
 .sidebar-nav ul li{
   padding: 10px 0;
   text-transform: uppercase;
-
+  list-style: none;
 }
 
 @media (max-width: 767px) {

@@ -1,7 +1,7 @@
 class NotificationsMailer < ActionMailer::Base
 
   default :from => "kayvon@codegain.net"
-  default :to => "kayvon@codegain.net"
+  default :to => ["kayvon@codegain.net", "david@codegain.net"]
 
   def new_message(message)
     @message = message

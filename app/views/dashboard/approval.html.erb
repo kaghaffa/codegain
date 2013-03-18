@@ -1,0 +1,20 @@
+<h2>Users</h2>
+
+
+
+<div id="dashboard-materials">
+<table class="table">
+  <thead>
+    <td><%= link_to "All User", :action => "approval" %></td>
+    <td><%= link_to "Users Awaiting Approval", :action => "approval", :approved => "false" %></td>
+    <td>Edit</td>
+  </thead>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.approved %></td>
+
+    </tr>
+  <% end %>
+</table>
+</div>
