@@ -5,6 +5,7 @@ Codegain::Application.routes.draw do
 
   match "/dashboard/download" => "dashboard#download"
   match "/dashboard/approval" => "dashboard#approval"
+  match "/dashboard/approve" => "dashboard#approve", :via => [:get]
 
   resources :messages
   resources :dashboard

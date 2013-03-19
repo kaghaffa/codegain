@@ -33,9 +33,9 @@
                 <li><a href="#">Supplementary Resources</a></li>
                 <li><a href="#">Analytics</a></li>
                 <li><a href="#">Help + Contact</a></li>
-                <% if current_user.admin? %>
+                <% #if current_user.admin? %>
                   <li><%= link_to "Account Approval", :action => "approval" %></li>
-                <% end %>
+                <% #end %>
               </ul>
             </div>
           </div>

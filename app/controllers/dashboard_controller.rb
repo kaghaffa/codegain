@@ -20,6 +20,15 @@ class DashboardController < ApplicationController
     end
   end
 
+  def approve
+    if params[:approved] == "true"
+      user = User.find(params[:user])
+      user.update_attributes(:approved => true)
+
+      redirect_to(dashboard_approval_path, :notice => "#{user.email} has been approved.")
+    end
+  end
+
   def download
     send_file "#{Rails.root}/private/class_materials/" + params[:file_name]
   end
