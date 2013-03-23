@@ -1,0 +1,10 @@
+<h2>Students</h2>
+<div id="dashboard-materials">
+<table class="table">
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= link_to student.email, dashboard_student_path(student.id) %></td>
+    </tr>
+  <% end %>
+</table>
+</div>

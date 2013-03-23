@@ -1,0 +1,71 @@
+<h2>Instructor View - Student Profile</h2>
+<div id="dashboard-materials">
+<table class="table">
+  <tr>
+  <td>name</td>
+  <td><%= @studentInfo[:student].email %></td>
+  </tr>
+</table>
+<div id="student-profile-container">
+  <h3> Quizzes </h3>
+  <table class="table">
+    <tr>
+      <th>Quiz Name</th>
+      <th>Course</th>          
+      <th>Score</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  <% @studentInfo[:quizzes].each do |quiz|  %>
+    <tr>
+      <td><%=h quiz.name %></td>
+      <td><%=h "course" %></td>          
+      <td><%= quiz.score %></td>
+      <td><%= link_to "Edit", edit_quiz_path(quiz) %></td>
+      <td>delete</td>
+    </tr>
+  <% end %>
+    <tr>
+      <%= form_for @quiz do |f| %>
+      <%= hidden_field_tag :user_id, @studentInfo[:student].id %>
+      <fieldset>
+            <td><%= f.text_field :name, placeholder: "Quiz Name *", :class => "required", :autocomplete => "off" %></td>
+            <td></td>
+            <td><%= f.text_field :score, placeholder: "Score *", :class => "required", :autocomplete => "off" %></td>
+        </fieldset>
+        <td><%= f.submit "Add Quiz", class: "submit-score-button" %></td>
+      <% end %>
+    </tr>
+  </table>   
+
+<h3> Assignments </h3>
+  <table class="table">
+    <tr>
+      <th>Assignment Name</th>
+      <th>Course</th>          
+      <th>Score</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  <% @studentInfo[:assignments].each do |assignment|  %>
+    <tr>
+      <td><%=h assignment.name %></td>
+      <td><%=h "course" %></td>          
+      <td><%= assignment.score %></td>
+      <td><%= link_to "Edit", edit_assignment_path(assignment) %></td>
+      <td>delete</td>
+    </tr>
+  <% end %>
+  <tr>
+      <%= form_for @assignment do |f| %>
+      <%= hidden_field_tag :user_id, @studentInfo[:student].id %>
+      <fieldset>
+            <td><%= f.text_field :name, placeholder: "Assignment Name *", :class => "required", :autocomplete => "off" %></td>
+            <td></td>
+            <td><%= f.text_field :score, placeholder: "Score *", :class => "required", :autocomplete => "off" %></td>
+        </fieldset>
+        <td><%= f.submit "Add Assignment", class: "submit-score-button" %></td>
+      <% end %>
+    </tr>
+  </table>   
+</div>

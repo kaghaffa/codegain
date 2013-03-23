@@ -10,6 +10,11 @@ class DashboardController < ApplicationController
   end
 
   def show
+
+  end
+
+  def roster 
+    @students = User.all
   end
 
   def approval
@@ -17,15 +22,6 @@ class DashboardController < ApplicationController
       @users = User.find_all_by_approved(false)
     else
       @users = User.all
-    end
-  end
-
-  def approve
-    if params[:approved] == "true"
-      user = User.find(params[:user])
-      user.update_attributes(:approved => true)
-
-      redirect_to(dashboard_approval_path, :notice => "#{user.email} has been approved.")
     end
   end
 
@@ -37,7 +33,7 @@ class DashboardController < ApplicationController
 
     def require_login
       unless user_signed_in?
-        redirect_to new_user_session_path
+#        redirect_to new_user_session_path
       end
     end
 

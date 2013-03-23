@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
                   :phone_number, :about
   # attr_accessible :title, :body
 
+  has_many :quizzes
+  has_many :assignments
+  has_many :courses, :through => :enrollments
+
   after_create :send_admin_mail
 
   def active_for_authentication?

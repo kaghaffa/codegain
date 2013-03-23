@@ -1,0 +1,9 @@
+<%= form_for @quiz do |f| %>
+<%= hidden_field_tag :user_id, @quiz.user_id %>
+  <fieldset>
+      <td><%= f.text_field :name, placeholder: @quiz.name, :class => "required", :autocomplete => "off" %></td>
+      <td></td>
+      <td><%= f.text_field :score, placeholder: @quiz.score, :class => "required", :autocomplete => "off" %></td>
+  </fieldset>
+  <td><%= f.submit "Update Quiz", class: "submit-score-button" %></td>
+<% end %>
