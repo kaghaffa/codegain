@@ -9,6 +9,7 @@ Codegain::Application.routes.draw do
 
   resources :messages
   resources :dashboard
+  resources :users
 
   root :to => 'home#index'
 

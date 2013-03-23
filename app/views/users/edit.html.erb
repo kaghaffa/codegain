@@ -1,0 +1,72 @@
+<section id="edit-profile">
+  <h2>Edit Profile</h2>
+  <div class="well well-small">
+    <span>All personal information is private. Only Codegain tutors can view it. We will not share any of this information.</span>
+  </div>
+
+  <%= form_for @user, :url => user_path(@user), :html => { :class => "form-horizontal" } do |f| %>
+    <fieldset>
+      <div class="well">
+        <legend>Personal Information (Private)</legend>
+        <div class="control-group">
+          <%= f.label :first_name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :first_name, :class => 'input-xlarge', :autocomplete => 'off' %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :last_name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :last_name, :class => 'input-xlarge', :autocomplete => 'off' %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :email, :class => 'control-label' %>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-envelope"></i></span>
+              <%= f.email_field :email, :class => 'input-xlarge', :autocomplete => 'off' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :phone_number, :class => 'control-label' %>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-phone"></i></span>
+              <%= f.telephone_field :phone_number, :class => 'input-xlarge', :autocomplete => 'off', :value => number_to_phone(f.object.phone_number) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="well well-small">
+        <span>All public information will be available to users.</span>
+      </div>
+      <div class="well">
+        <legend>Public Information</legend>
+        <div class="control-group">
+          <%= f.label :display_name, :class => 'control-label' %>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-user"></i></span>
+              <%= f.text_field :display_name, :class => 'input-xlarge', :placeholder => 'User name displayed to others', :autocomplete => 'off' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :about, :class => 'control-label' %>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-edit"></i></span>
+              <%= f.text_area :about, :cols => 20, :rows => 5, :class => 'input-xlarge', :placeholder => 'A small bit of information about yourself', :autocomplete => 'off' %>
+            </div>
+          </div>
+        </div>
+    </fieldset>
+    <%= button_tag 'Save Profile', :name => 'commit', :class => 'btn btn-primary btn-large' %>
+  <% end %>
+</section>

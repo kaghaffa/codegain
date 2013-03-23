@@ -1,9 +1,37 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.backend {
-  height: auto;
-  background-color: #393d40;
+
+// Dashboard styling
+#dashboard {
+  background-color: white;
+}
+
+#dashboard-home {
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+#dashboard-home h2 {
+  margin-bottom: 50px;
+}
+
+#dashboard-materials table {
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(236, 240, 241, 1);
+  margin-bottom: 50px;
+}
+
+#dashboard-materials table tr td {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+}
+
+#main.backend {
+  background-color: white;
+  height: 100%;
 }
 
 #error_explanation h2 {
@@ -26,11 +54,18 @@
   width:20%;
 }
 
+.sidebar-nav-custom {
+  position: relative;
+  top: 175px;
+}
+
 .sidebar-nav ul li{
   padding: 10px 0;
   text-transform: uppercase;
   list-style: none;
 }
+
+/** MEDIA **/
 
 @media (max-width: 767px) {
    .sidebar-nav-fixed {
@@ -44,3 +79,4 @@
       width: auto;
    }
  }
+

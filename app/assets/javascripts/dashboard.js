@@ -1,5 +1,8 @@
-$(document).ready(function(){
-  $('.dashboard-link').click(function(){
-    alert('Hooray!');
-  })
+//= require jquery
+//= require jquery_ujs
+//= require twitter/bootstrap
+
+$(function() {
+
+
 });

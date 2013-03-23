@@ -3,8 +3,12 @@
 <head>
   <title>codegain</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <% if params[:controller] == 'dashboard' || params[:controller] == 'devise/sessions' || params[:controller] == 'devise/registrations' || params[:controller] == 'users' %>
+    <%= javascript_include_tag "dashboard" %>
+  <% else %>
+    <%= javascript_include_tag "application", "home" %>
+  <% end %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/png" href="/assets/favicon.png">
@@ -15,6 +19,18 @@
   <div id="main" class="backend">
     <%= render "devise/header" %>
     <section id="auth">
+      <% if !flash.empty? %>
+        <% flash.each do |key, value| %>
+          <div class="container-fluid">
+            <div class="notice">
+              <div class="alert alert-<%= key %>">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <%= value %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
       <div class="container">
         <%= yield %>
       </div>
@@ -22,8 +38,20 @@
   </div>
 <% elsif params[:controller] == 'dashboard' %>
   <div id="main" class="backend">
-    <%= render "devise/header" %>
+    <%= render "devise/dashboard_header" %>
     <section id="dashboard">
+      <% if !flash.empty? %>
+        <% flash.each do |key, value| %>
+          <div class="container-fluid">
+            <div class="notice">
+              <div class="alert alert-<%= key %>">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <%= value %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span3">
@@ -33,15 +61,59 @@
                 <li><a href="#">Supplementary Resources</a></li>
                 <li><a href="#">Analytics</a></li>
                 <li><a href="#">Help + Contact</a></li>
-                <% #if current_user.admin? %>
-                  <li><%= link_to "Account Approval", :action => "approval" %></li>
-                <% #end %>
+                <% if current_user.admin? %>
+                  <li><%= link_to "Account Approval", :controller => 'dashboard', :action => "approval" %></li>
+                <% end %>
               </ul>
             </div>
           </div>
           <div class="span9">
             <div id="dashboard-home">
               <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<% elsif params[:controller] == 'users' %>
+  <div id="main" class="backend">
+    <%= render "devise/dashboard_header" %>
+    <section id="dashboard">
+      <% if !flash.empty? %>
+        <% flash.each do |key, value| %>
+          <div class="container-fluid">
+            <div class="notice">
+              <div class="alert alert-<%= key %>">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <%= value %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span9">
+            <div id="dashboard-home">
+              <%= yield %>
+            </div>
+          </div>
+          <div class="span3">
+            <div class="well sidebar-nav sidebar-nav-custom">
+              <ul class="nav nav-list">
+                <li class="nav-header">My Profile:</li>
+                <li><%= link_to 'Edit Profile', edit_user_path(current_user.id) %></li>
+                <li><%= link_to 'View Profile', user_path(current_user.id) %></li>
+              </ul>
+            </div>
+            <div class="well sidebar-nav sidebar-nav-custom">
+              <ul class="nav nav-list">
+                <li class="nav-header">My Classes:</li>
+                <li>Introduction to Java</li>
+                <li class="nav-header">Previous Classes:</li>
+                <li>Introduction to Java</li>
+              </ul>
             </div>
           </div>
         </div>

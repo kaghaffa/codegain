@@ -20,23 +20,13 @@ label {
   display: inline-block;
 }
 
-textarea {
-  border: none;
-}
-
 .notice {
-  color: rgba(255, 95, 63, 0.8);
-  width: 500px;
   margin: 0 auto;
   text-align: center;
-  font-size: 21px;
-  padding: 5px;
+  padding: 5px 0;
   -moz-transition: background-color .5s;
   -webkit-transition: background-color .5s;
   transition: background-color .5s;
-  position: absolute;
-  right: 33%;
-  top: 15px;
 }
 
 ::selection, ::-moz-selection {
@@ -281,6 +271,7 @@ textarea {
 }
 
 #message_body {
+  border: none;
   width: 400px;
   height: 100px;
   -moz-transition: background-color .3s;
@@ -376,7 +367,7 @@ html, body {
 }
 
 .backend {
-  height: auto;
+  height: 100%;
   background-color: #393d40;
 }
 
@@ -418,62 +409,4 @@ html, body {
   margin-top: 10px;
   width: 264px;
   padding: 10px 0;
-}
-
-// Dashboard styling
-#dashboard {
-  background-color: rgba(52, 152, 219, 1);
-}
-
-#dashboard-home {
-  margin: 0 auto;
-  margin-top: 75px;
-}
-
-#dashboard-home h2 {
-  color: white;
-  margin-bottom: 50px;
-}
-
-#dashboard-materials a {
-  background: rgba(100, 71, 65, 0.8);
-  color: white;
-  border: none;
-  border: transparent;
-  padding: 10px;
-  -moz-transition: background-color .3s;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-}
-
-#dashboard-materials a:hover {
-  background: rgba(255, 95, 63, 1);
-  text-decoration: none;
-}
-
-#dashboard-materials table {
-  text-align: center;
-  margin: 0 auto;
-  background: rgba(236, 240, 241, 1);
-  margin-bottom: 50px;
-}
-
-#dashboard-materials table thead {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-#dashboard-materials table tr td:first-child {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-#dashboard-materials table tr td{
-  text-align: center;
-  line-height: 40px;
-}
-
-#dashboard-materials table tr:hover{
-  color: rgb(92, 35, 35);
-  line-height: 40px;
 }
