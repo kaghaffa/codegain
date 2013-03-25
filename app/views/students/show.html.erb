@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td>Currently Enrolled in: </td>
-    <td><%= @studentInfo[:student].get_active_course.name %></td>
+    <td><%= @studentInfo[:student].get_active_course_name %></td>
   </tr>
 </table>
 <div id="student-profile-container">
@@ -31,16 +31,19 @@
     </tr>
   <% end %>
     <tr>
-      <%= form_for @quiz do |f| %>
-      <%= hidden_field_tag :user_id, @studentInfo[:student].id %>
-      <fieldset>
-            <td><%= f.text_field :name, placeholder: "Quiz Name *", :class => "required", :autocomplete => "off" %></td>
-            <td><%= f.select :course_id, options_for_select([[@studentInfo[:student].get_active_course.name, @studentInfo[:student].get_active_course.id]], @quiz.course_id) %></td>
-            <td><%= f.text_field :score, placeholder: "Score *", :class => "required", :autocomplete => "off" %></td>
-        </fieldset>
-        <td><%= f.submit "Add Quiz", class: "submit-score-button" %></td>
-      <% end %>
-    </tr>
+      <% if @studentInfo[:student].get_active_course %>
+        <%= form_for @quiz do |f| %>
+        <%= hidden_field_tag :user_id, @studentInfo[:student].id %>
+        <fieldset>
+              <td><%= f.text_field :name, placeholder: "Quiz Name *", :class => "required", :autocomplete => "off" %></td>
+              <td><%= f.select :course_id, options_for_select([[@studentInfo[:student].get_active_course_name, @studentInfo[:student].get_active_course.id]], @quiz.course_id) %></td>
+              <td><%= f.text_field :score, placeholder: "Score *", :class => "required", :autocomplete => "off" %></td>
+          </fieldset>
+          <td><%= f.submit "Add Quiz", class: "submit-score-button" %></td>
+        <% end %>
+      <% else %>
+        <td><%= "No Enrolled Courses" %></td>
+      <% end %>    </tr>
   </table>   
 
 <h3> Assignments </h3>
@@ -62,14 +65,18 @@
     </tr>
   <% end %>
   <tr>
+    <% if @studentInfo[:student].get_active_course %>            
       <%= form_for @assignment do |f| %>
       <%= hidden_field_tag :user_id, @studentInfo[:student].id %>
       <fieldset>
             <td><%= f.text_field :name, placeholder: "Assignment Name *", :class => "required", :autocomplete => "off" %></td>
-            <td><%= f.select :course_id, options_for_select([[@studentInfo[:student].get_active_course.name, @studentInfo[:student].get_active_course.id]], @quiz.course_id) %></td>
+            <td><%= f.select :course_id, options_for_select([[@studentInfo[:student].get_active_course_name, @studentInfo[:student].get_active_course.id]], @quiz.course_id) %></td>
             <td><%= f.text_field :score, placeholder: "Score *", :class => "required", :autocomplete => "off" %></td>
         </fieldset>
         <td><%= f.submit "Add Assignment", class: "submit-score-button" %></td>
+      <% end %>
+      <% else %>
+        <td><%= "No Enrolled Courses" %></td>
       <% end %>
     </tr>
   </table>   
