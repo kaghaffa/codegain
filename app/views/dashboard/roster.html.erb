@@ -3,7 +3,10 @@
 <table class="table">
   <% @students.each do |student| %>
     <tr>
+      <td><%= link_to student.get_name, dashboard_student_path(student.id) %></td>  
       <td><%= link_to student.email, dashboard_student_path(student.id) %></td>
+      <td><%= number_to_phone(student.phone_number) %></td>
+      <td><%= student.get_active_course_name %></td>
     </tr>
   <% end %>
 </table>

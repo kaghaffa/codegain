@@ -34,15 +34,21 @@ class User < ActiveRecord::Base
   end
 
   def get_courses_for_selection
-    courseNames = Enrollment
+    # TODO: Create a list of current courses, currently assume user has 1 course
+  end
+
+  def get_active_course_name
+    if course = self.get_active_course
+      course.name
+    else
+      "No enrolled courses"
+    end
   end
 
   def get_active_course
-    Course.find( Enrollment.find(self.id).course_id )
-  end
-
-  def get_formatted_phone_number
-    self.phone_number
+    if enrollment = Enrollment.find_by_user_id(self.id)
+      Course.find(enrollment.course_id)
+    end
   end
 
   def send_admin_mail

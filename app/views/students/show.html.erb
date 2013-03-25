@@ -2,9 +2,9 @@
 <div id="dashboard-materials">
 <table class="table">
   <tr>
-    <td><%= @studentInfo[:student].get_name() %></td>
+    <td><%= @studentInfo[:student].get_name %></td>
     <td><%= @studentInfo[:student].email %></td>
-    <td><%= @studentInfo[:student].get_formatted_phone_number %></td>
+    <td><%= number_to_phone(@studentInfo[:student].phone_number) %></td>
   </tr>
   <tr>
     <td>Currently Enrolled in: </td>
