@@ -29,6 +29,22 @@ class User < ActiveRecord::Base
     end
   end
 
+  def get_name
+    self.first_name + " " + self.last_name
+  end
+
+  def get_courses_for_selection
+    courseNames = Enrollment
+  end
+
+  def get_active_course
+    Course.find( Enrollment.find(self.id).course_id )
+  end
+
+  def get_formatted_phone_number
+    self.phone_number
+  end
+
   def send_admin_mail
     AdminMailer.new_user_waiting_for_approval(self).deliver
   end

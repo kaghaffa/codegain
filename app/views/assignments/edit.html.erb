@@ -1,9 +1,11 @@
 <%= form_for @assignment do |f| %>
 <%= hidden_field_tag :user_id, @assignment.user_id %>
   <fieldset>
-      <td><%= f.text_field :name, placeholder: @assignment.name, :class => "required", :autocomplete => "off" %></td>
-      <td></td>
+      Name:
+      <td><%= f.text_field :name, placeholder: @assignment.name, :class => "required", :autocomplete => "off" %></td> <br/>
+      Score:
       <td><%= f.text_field :score, placeholder: @assignment.score, :class => "required", :autocomplete => "off" %></td>
   </fieldset>
   <td><%= f.submit "Update Quiz", class: "submit-score-button" %></td>
+  <%= link_to student_path(@assignment.user_id) %>
 <% end %>

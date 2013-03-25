@@ -3,4 +3,8 @@ class Quiz < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :course
+
+  def get_course_name
+    Course.find(self.course_id).name
+  end
 end
