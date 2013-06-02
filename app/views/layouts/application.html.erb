@@ -37,7 +37,8 @@
     </section>
   </div>
 <% elsif params[:controller] == 'dashboard' || params[:controller] == 'students' || 
-         params[:controller] == 'quizzes' || params[:controller] == 'assignments'  %>
+         params[:controller] == 'quizzes' || params[:controller] == 'assignments' ||
+         params[:controller] == 'enrollments' %>
   <div id="main" class="backend">
     <%= render "devise/dashboard_header" %>
     <section id="dashboard">
@@ -61,10 +62,11 @@
                 <li><a href="/dashboard">Class Materials</a></li>
                 <li><a href="#">Supplementary Resources</a></li>
                 <li><a href="#">Analytics</a></li>
-                <li><a href="#">Help + Contact</a></li>
+                <li><%= link_to "Help + Contact", dashboard_help_contact_path %> </li>                
                 <% # if current_user.admin? %>
                   <li><%= link_to "Account Approval", :controller => 'dashboard', :action => "approval" %></li>
-                  <li><%= link_to "Student Profiles", :action => "roster", :controller => "dashboard" %></li>                  
+                  <li><%= link_to "Student Profiles", :action => "roster", :controller => "dashboard" %></li>  
+                  <li><%= link_to 'Enroll Students', enrollments_path %> </li>                                  
                 <% # end %>
               </ul>
             </div>

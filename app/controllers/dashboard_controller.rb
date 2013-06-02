@@ -25,6 +25,10 @@ class DashboardController < ApplicationController
     end
   end
 
+  def help_contact
+
+  end
+
   def download
     send_file "#{Rails.root}/private/class_materials/" + params[:file_name]
   end

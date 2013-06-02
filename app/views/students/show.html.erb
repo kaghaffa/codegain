@@ -6,11 +6,11 @@
     <td><%= @studentInfo[:student].email %></td>
     <td><%= number_to_phone(@studentInfo[:student].phone_number) %></td>
   </tr>
-  <tr>
-    <td>Currently Enrolled in: </td>
-    <td><%= @studentInfo[:student].get_active_course_name %></td>
-  </tr>
 </table>
+<h3> <%= @studentInfo[:student].get_active_course_name %> </h3>
+<div>
+    <span class="line"></span>
+</div>
 <div id="student-profile-container">
   <h3> Quizzes </h3>
   <table class="table">

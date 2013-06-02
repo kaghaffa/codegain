@@ -1,6 +1,11 @@
 class StudentsController < ApplicationController
 
+  def create
+
+  end
+
   def index
+    @students = User.all
   end
 
   def show
