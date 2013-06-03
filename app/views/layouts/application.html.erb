@@ -63,11 +63,11 @@
                 <li><a href="#">Supplementary Resources</a></li>
                 <li><a href="#">Analytics</a></li>
                 <li><%= link_to "Help + Contact", dashboard_help_contact_path %> </li>                
-                <% # if current_user.admin? %>
+                <% if current_user.admin? %>
                   <li><%= link_to "Account Approval", :controller => 'dashboard', :action => "approval" %></li>
-                  <li><%= link_to "Student Profiles", :action => "roster", :controller => "dashboard" %></li>  
+                  <li><%= link_to "Student Profiles", :controller => "dashboard", :action => "roster" %></li>  
                   <li><%= link_to 'Enroll Students', enrollments_path %> </li>                                  
-                <% # end %>
+                <% end %>
               </ul>
             </div>
           </div>

@@ -46,8 +46,9 @@ class User < ActiveRecord::Base
   end
 
   def get_active_course
-    if enrollment = Enrollment.find_by_user_id(self.id)
-      Course.find(enrollment.course_id)
+    enrollments = Enrollment.where( :user_id => self.id, :active => true)  
+    if !enrollments.empty? 
+      Course.find(enrollments[0].course_id)
     end
   end
 

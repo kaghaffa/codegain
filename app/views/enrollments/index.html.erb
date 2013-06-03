@@ -1,14 +1,14 @@
-<h2>Users</h2>
+<h2>Student Enrollments</h2>
 
 <div id="dashboard-materials">
 <table class="table">
   <% @students.each do |student| %>
     <tr>
-      <td><%= student.email %></td>
-      <td><%= student.get_active_course_name %></td>
-      <%= form_for @enrollment do |f| %>
-        <fieldset>
-        </fieldset>
+      <td><%= student.get_name %></td>
+      <% if student.get_active_course %>
+        <td><%= link_to student.get_active_course_name, edit_enrollment_path(Enrollment.find_by_user_id(student.id)) %></td>
+      <% else %>
+        <td><%= link_to student.get_active_course_name, new_enrollment_path( :student_param => student ) %></td>        
       <% end %>
     </tr>
   <% end %>

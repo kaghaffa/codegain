@@ -1,0 +1,12 @@
+<h3>Enroll Student</h3>
+<h4><%= @enrollment.enrolled_user.get_name %></h4>
+
+<%= form_for @enrollment do |f| %>
+  <%= hidden_field_tag :user_id, @enrollment.user_id %>
+  <fieldset>
+      <td>
+        <%= f.collection_select(:course_id, Course.all, :id, :name) %>
+        <%= f.submit "Enroll" %>
+      </td>
+  </fieldset>
+<% end %> 
